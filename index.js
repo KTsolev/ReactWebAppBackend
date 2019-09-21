@@ -7,13 +7,15 @@ const fs = require('fs');
 const mailer = require('./mailer');
 const os = require('os');
 const portfinder = require('portfinder');
+const config = require('dotenv').config();
+
 let port = null;
 
 const init = async () => {
 
     const server = Hapi.server({
         port,
-        host: 'localhost',
+        host: config.parsed.BASE_URL || 'localhost',
         routes: {
           cors: {
               origin: ["*"],
@@ -39,7 +41,7 @@ const init = async () => {
     
     await server.route({
       method: 'POST',
-      path: '/sendmail',
+      path: config.parsed.ENDPOINT || '/sendmail',
       options: {
         validate: {
           payload: {

@@ -3,6 +3,7 @@ const templatesDir = path.resolve(__dirname, './views');
 const Email = require('email-templates');
 const config = require('dotenv').config();
 console.log(config)
+
 const mailjet = require('node-mailjet').connect(
   config.parsed.API_KEY,
   config.parsed.SECRET_KEY
