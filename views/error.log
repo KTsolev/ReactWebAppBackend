@@ -1,0 +1,11 @@
+ValidationError: child "email" fails because ["email" with value "msd@err...waa" fails to match the email pattern]
+ValidationError: child "email" fails because ["email" with value "msd@err...waa" fails to match the email pattern]\n\rValidationError: child "name" fails because ["name" with value "111" fails to match the name pattern]
+ValidationError: child "email" fails because ["email" with value "msdrr.waa" fails to match the email pattern]
+ValidationError: child "email" fails because ["email" is required]
+ValidationError: child "email" fails because ["email" is required]
+ValidationError: child "email" fails because ["email" is required]
+ValidationError: child "email" fails because ["email" is required]
+ValidationError: child "email" fails because ["email" is required]
+ValidationError: child "email" fails because ["email" is required]
+newPort: 8000
+newPort: 8000
