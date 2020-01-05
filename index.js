@@ -38,6 +38,21 @@ const init = async () => {
     })
     
     console.log('Server running on %s', server.info.uri);
+
+    await server.route({
+      method: 'GET',
+      path: '/api',
+      handler: (request, h) => {
+        let response = {};
+
+        response.user = 'mailer';
+        response.last = Date.now();
+        response.message = 'It works';
+        
+        console.log(response);
+        return h.response(response);
+      }
+    });
     
     await server.route({
       method: 'POST',
